@@ -1,0 +1,17 @@
+{
+  "name": "pouchdb-server-continuous-feed-debug",
+  "version": "1.0.0",
+  "description": "Debugging the issue with pouchdb-server and continuous changes feeds",
+  "main": "index.js",
+  "scripts": {
+    "server": "rm -rf config.json log.txt && pouchdb-server -p 5985 --in-memory",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nano": "^6.1.2",
+    "pouchdb-server": "^0.6.5"
+  }
+}

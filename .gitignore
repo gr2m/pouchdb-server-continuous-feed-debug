@@ -1,0 +1,4 @@
+node_modules
+# pouchdb-server stuff
+config.json
+log.txt
