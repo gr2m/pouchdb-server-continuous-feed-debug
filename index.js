@@ -20,7 +20,18 @@ nano.db.create('test', function (error) {
     console.log('listen to changes for /test')
     var db = nano.use('test')
     var feed = db.follow({})
+    feed.on('change', function(change) {
+      console.log('change detected:\n%j', change)
+    })
     feed.follow()
+
+    process.nextTick(function() {
+      db.insert({test: 1})
+    })
+
+    setTimeout(function() {
+      db.insert({test: 2})
+    }, 1000)
   });
 
 })
