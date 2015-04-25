@@ -17,10 +17,10 @@ nano.db.create('test', function (error) {
     // open this URL to get the same result
     // http://localhost:5985/test/_changes?since=0&feed=continuous&heartbeat=30000
 
-    // console.log('listen to changes for /test')
-    // var db = nano.use('test')
-    // var feed = db.follow({})
-    // feed.follow()
+    console.log('listen to changes for /test')
+    var db = nano.use('test')
+    var feed = db.follow({})
+    feed.follow()
   });
 
 })
