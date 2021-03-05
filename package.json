@@ -13,5 +13,6 @@
   "dependencies": {
     "nano": "^6.1.2",
     "pouchdb-server": "^0.6.5"
-  }
+  },
+  "repository": "github:gr2m/pouchdb-server-continuous-feed-debug"
 }
